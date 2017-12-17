@@ -1,3 +1,4 @@
+require 'date'
 require_relative 'error'
 
 module Definitions
@@ -60,7 +61,7 @@ module Definitions
         given["date"].each do |d|
           begin
             DateTime.parse(d)
-          rescue TypeError, ArgumentError
+          rescue TypeError, ArgumentError, NoMethodError
             err!("Test must contain valid date, date value was: '#{d}")
           end
         end
