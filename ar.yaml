@@ -71,6 +71,7 @@ months:
   - name: Navidad
     regions: [ar]
     mday: 25
+
 tests:
   - given:
       date: '2016-01-01'
