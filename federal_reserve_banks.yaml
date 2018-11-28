@@ -30,7 +30,7 @@ months:
   - name: Independence Day
     regions: [federal_reserve_banks]
     mday: 4
-    observed: to_monday_if_sunday(date)
+    observed: to_weekday_if_sunday(date)
   9:
   - name: Labor Day
     week: 1
@@ -92,7 +92,7 @@ tests:
       regions: ["federal_reserve_banks"]
       options: ["observed"]
     expect:
-      holiday: false
+      name: "Independence Day"
   - given:
       date: '2012-09-03'
       regions: ["federal_reserve_banks"]
